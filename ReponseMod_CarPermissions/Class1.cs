@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ReponseMod_CarPermissions
 {
@@ -31,7 +32,7 @@ namespace ReponseMod_CarPermissions
 
             if (CarPermisson(vehicle.id) && !CarAllowPerm(pl, vehicle.id))
             {
-                Console.WriteLine("1");
+                ChatManager.serverSendMessage(Configuration.Instance.WarningMessage, Color.white, null, pl.SteamPlayer(), EChatMode.SAY, Configuration.Instance.ServerLogo, true);
                 shouldAllow = false;
                 return;
             }
