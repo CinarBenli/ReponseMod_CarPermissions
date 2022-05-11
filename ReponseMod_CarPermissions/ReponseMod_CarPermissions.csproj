@@ -77,8 +77,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Modals\Araba.cs" />
-    <Compile Include="Modals\ArabaBlacklist.cs" />
+    <Compile Include="Modals\Vehicle.cs" />
+    <Compile Include="Modals\VehicleBlacklist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

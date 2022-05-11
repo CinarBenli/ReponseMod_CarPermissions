@@ -8,35 +8,32 @@ namespace ReponseMod_CarPermissions
     {
         public string ServerLogo;
         public string WarningMessage;
-        public List<ArabaBlacklist> VehicleBlacklists { get; set; } = new List<ArabaBlacklist>();
+        public List<VehicleBlacklist> VehicleBlacklists { get; set; } = new List<VehicleBlacklist>();
 
         public void LoadDefaults()
         {
             ServerLogo = "https://media.discordapp.net/attachments/959142220366237796/962008357990977626/122.png";
             WarningMessage = "You <color=red>Don't Have</color> The Necessary <color=yellow>Authority</color> To Get In The <color=orange>Car</color>.";
-            VehicleBlacklists = new List<ArabaBlacklist>
+            VehicleBlacklists = new List<VehicleBlacklist>
             {
-                new ArabaBlacklist
+                new VehicleBlacklist
                 (
                     "hava",
-                    new List<Araba>
+                    new List<Vehicle>
                     {
-                        new Araba(1),
-                        new Araba(2),
-                        new Araba(3)
+                        new Vehicle(1),
+                        new Vehicle(2),
+                        new Vehicle(3)
                     }
                 ),
-                new ArabaBlacklist
+                new VehicleBlacklist
                 (
                     "tank",
-                    new List<Araba>
+                    new List<Vehicle>
                     {
-                        new Araba(140),
-                        new Araba(308),
-                        new Araba(309),
-                        new Araba(310),
-                        new Araba(363),
-                        new Araba(116)
+                        new Vehicle(140),
+                                                new Vehicle(96)
+
                     }
                 )
             };

@@ -7,16 +7,16 @@ using System.Xml.Serialization;
 
 namespace ReponseMod_CarPermissions.Modals
 {
-    public class Araba
+    public class Vehicle
     {
         [XmlAttribute]
         public ushort Id { get; set; }
 
-        public Araba()
+        public Vehicle()
         {
         }
 
-        public Araba(ushort id)
+        public Vehicle(ushort id)
         {
             Id = id;
         }

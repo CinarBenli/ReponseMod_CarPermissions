@@ -38,10 +38,10 @@ namespace ReponseMod_CarPermissions
             }
 
         }
-        private bool CarPermisson(ushort id) => Configuration.Instance.VehicleBlacklists.Any(k => k.Arabalar.Any(e => e.Id == id));
+        private bool CarPermisson(ushort id) => Configuration.Instance.VehicleBlacklists.Any(k => k.Vehicles.Any(e => e.Id == id));
 
-        private bool CarAllowPerm(UnturnedPlayer oyuncu, ushort id) => Configuration.Instance.VehicleBlacklists.Any(k => oyuncu.HasPermission($"reponse.vehicleblacklist.{k.ArabaBlacklistName}")
-                                                                                                                     && k.Arabalar.Any(e => e.Id == id));
+        private bool CarAllowPerm(UnturnedPlayer oyuncu, ushort id) => Configuration.Instance.VehicleBlacklists.Any(k => oyuncu.HasPermission($"reponse.vehicleblacklist.{k.VehiclePermissionName}")
+                                                                                                                     && k.Vehicles.Any(e => e.Id == id));
 
 
 
